@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090c" />
+  <title>KNIGHT.EXE — Unexpected Encounters</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game" aria-live="polite">
+    <section id="title-screen" class="screen active">
+      <div class="scanlines"></div>
+      <div class="title-frame">
+        <p class="eyebrow">COLLECTION 001</p>
+        <h1>KNIGHT.EXE</h1>
+        <p class="subtitle">UNEXPECTED ENCOUNTERS</p>
+        <button id="start-button" class="pixel-button">PRESS TO BEGIN</button>
+        <p class="tiny">ver.001 · headphones recommended</p>
+      </div>
+    </section>
+
+    <section id="story-screen" class="screen">
+      <div class="scene-wrap">
+        <canvas id="scene" width="320" height="180" aria-label="A knight and a short traveler sitting beside a campfire at night"></canvas>
+        <div class="crt-overlay"></div>
+      </div>
+
+      <section id="dialogue-box" class="dialogue-box">
+        <div class="speaker-row">
+          <span id="speaker">TRAVELER</span>
+          <button id="sound-toggle" class="icon-button" aria-label="Mute or unmute sound">♪ ON</button>
+        </div>
+        <p id="dialogue-text"></p>
+        <div id="choices" class="choices"></div>
+        <button id="continue-button" class="pixel-button hidden">CONTINUE</button>
+      </section>
+    </section>
+
+    <section id="ending-screen" class="screen">
+      <div class="ending-fire" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <p class="eyebrow">UNEXPECTED ENCOUNTERS</p>
+      <h2>END OF CHAPTER 001</h2>
+      <p id="ending-message">Thank you for accepting this encounter.</p>
+      <p class="signature">KNIGHT.EXE</p>
+      <button id="restart-button" class="pixel-button">RETURN TO THE FIRE</button>
+      <p id="final-whisper" class="whisper hidden">The fire will be waiting when you return.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
